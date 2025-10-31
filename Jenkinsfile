@@ -47,7 +47,7 @@ pipeline {
                 script {
                     sh """
                         docker rm -f api-pokemon || true
-                        docker run -d --name api-pokemon -p 8080:8080 ${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}
+                        docker run -d --name api-pokemon -p 8082:8080 ${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}
                     """
                 }
             }
